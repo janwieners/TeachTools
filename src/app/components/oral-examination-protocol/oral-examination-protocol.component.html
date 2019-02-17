@@ -1,0 +1,41 @@
+<mat-card id="examination-protocol">
+
+  <mat-card-title>
+    Oral Examination Protocols
+  </mat-card-title>
+
+  <mat-card-subtitle>
+    Mass Create Oral Examination Protocol Forms
+  </mat-card-subtitle>
+
+  <mat-form-field>
+    <input matInput
+           [(ngModel)]="title"
+           placeholder="Title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput
+           [(ngModel)]="module"
+           placeholder="Module Context">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput
+           [(ngModel)]="term"
+           placeholder="Term">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput
+              [(ngModel)]="data"
+              placeholder="Insert here your semicolon-separated examination data: Time;Name;Matriculation-Number"></textarea>
+  </mat-form-field>
+
+  <button mat-flat-button
+          color="primary"
+          (click)="createPDF()">
+    Create PDF
+  </button>
+
+</mat-card>
