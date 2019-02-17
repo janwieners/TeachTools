@@ -40,13 +40,16 @@ export class OralExaminationProtocolComponent implements OnInit {
       for (i = 0; i < 4; i++) {
 
         doc.setFontType('bold');
+        doc.setFontSize(14);
         doc.text(20, 20, 'Mündliche Prüfung ' + this.module);
+
         doc.setFontType('normal');
+        doc.setFontSize(10);
 
         doc.text(20, 30, this.title);
-        doc.text(20, 40, this.term);
-        doc.text(20, 60, examination[0] + ', ' + examination[1] + ' Uhr');
-        doc.text(20, 70, examination[2] + ', ' + examination[3]);
+        doc.text(20, 35, this.term);
+        doc.text(20, 45, examination[0] + ', ' + examination[1] + ' Uhr');
+        doc.text(20, 50, examination[2] + ', ' + examination[3]);
       }
 
       doc.addPage();
